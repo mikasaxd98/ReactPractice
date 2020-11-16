@@ -4,52 +4,52 @@ import './index.css';
 import App from './Components/app/'
 
 
-class WhowAmI extends Component{
-    constructor(props){
-        super(props);
-        this.state ={
+// class WhowAmI extends Component{
+//     constructor(props){
+//         super(props);
+//         this.state ={
 
-            years:26
-        }
+//             years:26
+//         }
 
-    }
-    nextYear = () =>{
-     this.setState( state =>({
-        years: ++state.years
-     }))      
-    }
+//     }
+//     nextYear = () =>{
+//      this.setState( state =>({
+//         years: ++state.years
+//      }))      
+//     }
 
-    render(){
-      const {name,surname,link} = this.props;
-      const {years} = this.state;
-        return (
+//     render(){
+//       const {name,surname,link} = this.props;
+//       const {years} = this.state;
+//         return (
 
-            <React.Fragment>
-        <button onClick={this.nextYear}></button>
-        <h1>My name is {name},surname - {surname}, years  - {years}</h1>
-                <a href = {link}>My profile</a>
-            </React.Fragment>
+//             <React.Fragment>
+//         <button onClick={this.nextYear}></button>
+//         <h1>My name is {name},surname - {surname}, years  - {years}</h1>
+//                 <a href = {link}>My profile</a>
+//             </React.Fragment>
             
-                )
-            }
+//                 )
+//             }
     
-}
+// }
 
 
 
-const All = ()=>{
+// const All = ()=>{
 
-    return (
-<React.Fragment>
-    <WhowAmI name = "Vasea" surname = "Verdes" link = "odnoklassniki.ru"/>
-    <WhowAmI name = "Ivan" surname = "Verdes" link = "vk.ru"/>
-    <WhowAmI name = "Ann" surname = "Verdes" link = "twitter.ru"/>
-</React.Fragment>
+//     return (
+// <React.Fragment>
+//     <WhowAmI name = "Vasea" surname = "Verdes" link = "odnoklassniki.ru"/>
+//     <WhowAmI name = "Ivan" surname = "Verdes" link = "vk.ru"/>
+//     <WhowAmI name = "Ann" surname = "Verdes" link = "twitter.ru"/>
+// </React.Fragment>
 
 
-    )
-}
+//     )
+// }
 
-ReactDOM.render(<All/>,document.getElementById('root'));
+ReactDOM.render(<App/>,document.getElementById('root'));
 
 

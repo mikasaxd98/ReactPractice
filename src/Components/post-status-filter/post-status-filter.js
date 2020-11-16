@@ -7,8 +7,8 @@ return (
 
 <div className="btn-group">
 
-    <button/>
-    <button/>
+    <button type="button" className="btn btn-info">Все</button>
+    <button type="button" className="btn btn-secondary">Понравилось</button>
 </div>
 
 )
