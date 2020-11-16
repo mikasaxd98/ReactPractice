@@ -1,17 +1,55 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './Components/app/'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class WhowAmI extends Component{
+    constructor(props){
+        super(props);
+        this.state ={
+
+            years:26
+        }
+
+    }
+    nextYear = () =>{
+     this.setState( state =>({
+        years: ++state.years
+     }))      
+    }
+
+    render(){
+      const {name,surname,link} = this.props;
+      const {years} = this.state;
+        return (
+
+            <React.Fragment>
+        <button onClick={this.nextYear}></button>
+        <h1>My name is {name},surname - {surname}, years  - {years}</h1>
+                <a href = {link}>My profile</a>
+            </React.Fragment>
+            
+                )
+            }
+    
+}
+
+
+
+const All = ()=>{
+
+    return (
+<React.Fragment>
+    <WhowAmI name = "Vasea" surname = "Verdes" link = "odnoklassniki.ru"/>
+    <WhowAmI name = "Ivan" surname = "Verdes" link = "vk.ru"/>
+    <WhowAmI name = "Ann" surname = "Verdes" link = "twitter.ru"/>
+</React.Fragment>
+
+
+    )
+}
+
+ReactDOM.render(<All/>,document.getElementById('root'));
+
+
