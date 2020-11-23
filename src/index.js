@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Components/app/'
+import 'bootstrap/dist/css/bootstrap.css'
 
 
 // class WhowAmI extends Component{

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button} from 'reactstrap'
 import './post-status-filter.css'
 
 const PostStatusFilter = ()=>{
@@ -6,8 +7,7 @@ const PostStatusFilter = ()=>{
 return (
 
 <div className="btn-group">
-
-    <button type="button" className="btn btn-info">Все</button>
+    <Button outline color='info'>Все</Button>
     <button type="button" className="btn btn-secondary">Понравилось</button>
 </div>
 
